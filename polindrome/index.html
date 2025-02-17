@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check if a String is a Palindrome</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="wrapper">
+    
+    <h1>Palindrome Checker</h1>
+    <div>
+        <input type="text" name="input" id="input" placeholder="Enter a String" required>
+    </div>
+    <div>
+        <button type="button" onclick="check()">Check Palindrome</button>
+    </div>
+    <div id="result"></div>
+
+    </div>
+
+    <script>
+        function check() {
+            var input = document.getElementById("input").value.trim(); 
+            var resultDiv = document.getElementById("result");
+            
+            if (input === "") {
+                resultDiv.innerHTML = "<h4>Please enter a valid string.</h4>";
+                return;
+            }
+
+            var reverseword = input.split("").reverse().join(""); 
+
+            if (input === reverseword) {
+                resultDiv.innerHTML = "<h3>The string is a palindrome!</h3>";
+            } else {
+                resultDiv.innerHTML = "<h4>The string is not a palindrome.</h4>";
+            }
+        }
+    </script>
+
+</body>
+</html>

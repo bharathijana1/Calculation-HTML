@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ODD or EVEN</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="container">
+      <div id="oddeven">
+        <div id="heading">
+          <h1>Odd or Even</h1>
+        </div>
+        <div id="input">
+          <input type="text" name="num" id="num" placeholder="Enter a number" />
+        </div>
+        <div id="button">
+          <button id="btn" onclick="oddoreven()">Check Odd or Even</button>
+        </div>
+        <div id="result"></div>
+        <hr />
+      </div>
+      <div id="feedback">
+        <h1>Feedback about this page</h1>
+        <h3 id="feed">Kindly select your feedback</h3>
+        <div id="feedbackbtn">
+          <button onclick="update(event)">Good</button>
+          <button onclick="update(event)">Very Good</button>
+          <button onclick="update(event)">Bad</button>
+          <button onclick="update(event)">Very Bad</button>
+        </div>
+        <div class="submitt">
+          <button id="submit" onclick="submitFeedback()">Submit</button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function oddoreven() {
+        var result = document.getElementById("result");
+        var input = document.getElementById("num").value;
+
+        if (input === "") {
+          result.innerHTML = "<h3>Please enter a number</h3>";
+        } else if (isNaN(input)) {
+          result.innerHTML = "<h3>Please enter a valid number</h3>";
+        } else {
+          input = parseFloat(input);
+          if (input % 2 === 0) {
+            result.innerHTML = "<h3>" + input + " is even</h3>";
+          } else {
+            result.innerHTML = "<h3>" + input + " is odd</h3>";
+          }
+        }
+      }
+
+      var h3 = document.getElementById("feed");
+      function update(event) {
+        h3.textContent = "You selected: " + event.target.textContent;
+      }
+
+      function submitFeedback() {
+        var feedback = document.getElementById("feed").textContent;
+        if (feedback !== "Kindly select your feedback") {
+          alert("Feedback successfully submitted: " + feedback);
+          h3.textContent = "Thank you for your feedback!";
+        } else {
+          alert("Please select feedback before submitting.");
+        }
+      }
+    </script>
+  </body>
+</html>
