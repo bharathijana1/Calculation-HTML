@@ -1,0 +1,96 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+body{
+
+   
+}
+.hole{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 600px;   
+
+}
+.content{
+    border: 1px solid blue;
+    height: 600px;  
+    width: 1000px; 
+  
+
+}
+.nav{
+    list-style: none;
+    text-decoration: none;
+    float: left;
+    width: 20%;
+    size: 5rem;
+    padding-top: 10px;
+}
+.nav li a{
+    font-size: 2rem;
+    color: white;
+
+}
+.nav ul li{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding: 10px 0 10px 5px;
+    margin: 3px;
+}
+.red{
+    background-color: rgb(226, 24, 24);
+}
+.green{
+    background-color: rgb(35, 214, 35);
+}
+.blue{
+    background-color: rgb(41, 41, 228);
+}
+.explain{
+    display: grid;
+    justify-content: left;
+    align-items: left;
+    display: grid;
+    /* grid-template-columns: 1fr 1fr 1fr; */
+    grid-template-columns: repeat(3 ,minmax(200px,1fr));
+    gap: 10px;
+    box-sizing: border-box;
+    width: 50%;
+    height: 600px;
+    padding: 10px;
+    padding-right: 0px;
+}
+.hole sizee{
+    height: 100vh;
+    width: 800px; 
+
+}
+
+.para{
+    border: 1px solid black;
+    text-align: center;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    
+}
+.para p{
+    font-size: 20px;
+    color: white;
+}
+h1{
+    text-align: center;
+    font-size: px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 5px;
+    margin: 5px;
+    
+}

@@ -1,0 +1,138 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    background-color: white;
+    overflow: hidden;
+    min-height: 100vh;
+    width: 100%;
+    background: linear-gradient(to top,white 70%, yellowgreen);
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    color: black;
+    padding: 15px 20px;
+    text-transform: uppercase;
+}
+nav ul li{
+    display: inline-block;
+    margin: 10px 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 15px;
+}
+nav ul li a{
+    color: black;
+}
+nav ul li a:hover{
+    border-bottom: 1px solid black;
+}
+.main{
+    width: 100%;
+    display: flex;
+}
+.content{
+    width: 50%;
+    color: black;
+    margin-top: 8%;
+    margin-left: 5%;
+    text-transform: capitalize;
+}
+.content h1{
+    font-size: 60px;
+    letter-spacing: 2px;
+    margin-bottom: 2%;
+    text-transform: uppercase;
+}
+.content h3{
+    font-size: 25px;
+    margin-bottom: 1%;
+}
+span{
+    color: yellowgreen;
+}
+.content p{
+    font-size: 20px;
+    margin-bottom: 3%;
+}
+button{
+    padding: 10px 15px;
+    background-color: transparent;
+    color: black;
+    font-size: 17px;
+    border-radius: 10px;
+    background: linear-gradient(to bottom,white ,yellowgreen);
+    text-transform: capitalize;
+}
+button:hover{
+    background-color: yellowgreen;
+    font-weight: bold;
+}
+.imgg{
+    width: 50%;
+    margin-top: 8%;
+    margin-left: 5%;
+    margin-right: 5%;
+
+}
+img{
+    width: 30rem;
+    height: 30rem;
+}
+@media screen and (max-width:1200px) {
+    .content{
+        width: 100%;
+        text-align: center;
+
+    }
+    .imgg{
+        width: 100%;
+        position: absolute;
+        bottom: -5%;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+    img{
+        width: 20rem;
+        height: 20rem;
+    }
+
+    
+}
+@media screen and (max-width:576px) {
+    .content{
+        width: 100%;
+        text-align: center;
+    }
+    .content h1, h3, p{
+        margin-bottom: 5%;
+    }.content h3{
+        margin-bottom: 5%;
+    }
+    .content p{
+        margin-bottom: 5%;
+    }
+    button{
+        margin-bottom: 5%;
+    }
+    .imgg{
+        width: 100%;
+        position: absolute;
+        bottom: -5%;
+        display: flex;
+        justify-content: center;
+    }
+    img{
+        width: 16rem;
+        height: 16rem;
+    }
+
+    
+}
